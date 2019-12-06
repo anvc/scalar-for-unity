@@ -1,0 +1,142 @@
+[
+  {
+    "property": "number",
+    "uri": "http://open.vocab.org/terms/versionnumber",
+    "type": "int"
+  },
+  {
+    "property": "created",
+    "uri": "http://purl.org/dc/terms/created",
+    "type": "string"
+  },
+  {
+    "property": "description",
+    "uri": "http://purl.org/dc/terms/description",
+    "type": "string"
+  },
+  {
+    "property": "isReplacedBy",
+    "uri": "http://purl.org/dc/terms/isReplacedBy",
+    "type": "string"
+  },
+  {
+    "property": "isVersionOf",
+    "uri": "http://purl.org/dc/terms/isVersionOf",
+    "type": "string"
+  },
+  {
+    "property": "title",
+    "uri": "http://purl.org/dc/terms/title",
+    "type": "string"
+  },
+  {
+    "property": "content",
+    "uri": "http://rdfs.org/sioc/ns#content",
+    "type": "string"
+  },
+  {
+    "property": "defaultView",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#defaultView",
+    "type": "string"
+  },
+  {
+    "property": "baseType",
+    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "type": "string"
+  },
+  {
+    "property": "sourceFile",
+    "uri": "http://simile.mit.edu/2003/10/ontologies/artstor#url",
+    "type": "string"
+  },
+  {
+    "property": "source",
+    "uri": "http://ns.exiftool.ca/IPTC/IPTC/1.0/By-line",
+    "type": "string"
+  },
+  {
+    "property": "source",
+    "uri": "http://purl.org/dc/terms/source",
+    "type": "string"
+  },
+  {
+    "property": "thumbnail",
+    "uri": "http://simile.mit.edu/2003/10/ontologies/artstor#thumbnail",
+    "type": "string"
+  },
+  {
+    "property": "thumbnail",
+    "uri": "artstor:thumbnail",
+    "type": "string"
+  },
+  {
+    "property": "sourceLocation",
+    "uri": "http://simile.mit.edu/2003/10/ontologies/artstor#sourceLocation",
+    "type": "string"
+  },
+  {
+    "property": "urn",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#urn",
+    "type": "string"
+  },
+  {
+    "property": "sortNumber",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#sort_number",
+    "type": "int"
+  },
+  {
+    "property": "continueTo",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#continue_to",
+    "type": "int"
+  },
+  {
+    "property": "continueToContentId",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#continue_to_content_id",
+    "type": "int"
+  },
+  {
+    "property": "editorialState",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#editorialState",
+    "type": "string"
+  },
+  {
+    "property": "editorialQueries",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#editorial_queries",
+    "type": "string"
+  },
+  {
+    "property": "usageRights",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#usageRights",
+    "type": "int"
+  },
+  {
+    "property": "isLive",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#isLive",
+    "type": "int"
+  },
+  {
+    "property": "paywall",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#paywall",
+    "type": "string"
+  },
+  {
+    "property": "fullname",
+    "uri": "http://scalar.usc.edu/2012/01/scalar-ns#fullname",
+    "type": "string"
+  },
+  {
+    "property": "author",
+    "uri": "http://www.w3.org/ns/prov#wasAttributedTo",
+    "type": "string"
+  },
+  {
+    "property": "references",
+    "uri": "http://purl.org/dc/terms/references",
+    "type": "string"
+  },
+  {
+    "property": "isReferencedBy",
+    "uri": "http://purl.org/dc/terms/isReferencedBy",
+    "type": "string"
+  }
+]

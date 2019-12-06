@@ -1,0 +1,101 @@
+{
+	"tag": {
+		"id": "tag",
+		"body": "tag",
+		"bodyPlural": "tags",
+		"target": "item",
+		"targetPlural": "items",
+		"incoming": "has",
+		"outgoing": "tags"
+	},
+	"path": {
+		"id": "path",
+		"body": "path",
+		"bodyPlural": "paths",
+		"target": "item",
+		"targetPlural": "items",
+		"incoming": "contained by",
+		"outgoing": "contains"
+	},
+	"referee": {
+		"id": "referee",
+		"body": "item",
+		"bodyPlural": "items",
+		"target": "media file",
+		"targetPlural": "media files",
+		"incoming": "referenced by",
+		"outgoing": "references"
+	},
+	"annotation": {
+		"id": "annotation",
+		"body": "annotation",
+		"bodyPlural": "annotations",
+		"target": "item",
+		"targetPlural": "items",
+		"incoming": "annotated by",
+		"outgoing": "annotates"
+	},
+	"comment": {
+		"id": "comment",
+		"body": "comment",
+		"bodyPlural": "comments",
+		"target": "item",
+		"targetPlural": "items",
+		"incoming": "has",
+		"outgoing": "is a comment on"
+	},
+	"commentary": {
+		"id": "commentary",
+		"body": "commentary",
+		"bodyPlural": "commentaries",
+		"target": "item",
+		"targetPlural": "items",
+		"incoming": "has",
+		"outgoing": "is a commentary on"
+	},
+	"review": {
+		"id": "review",
+		"body": "review",
+		"bodyPlural": "reviews",
+		"target": "item",
+		"targetPlural": "items",
+		"incoming": "has",
+		"outgoing": "is a review of"
+	},
+	"author": {
+		"id": "author",
+		"body": "book",
+		"bodyPlural": "books",
+		"target": "author",
+		"targetPlural": "authors",
+		"incoming": "written by",
+		"outgoing": "has written"
+	},
+	"commentator": {
+		"id": "commentator",
+		"body": "book",
+		"bodyPlural": "book",
+		"target": "commentator",
+		"targetPlural": "commentators",
+		"incoming": "responded to by",
+		"outgoing": "has responded to"
+	},
+	"reviewer": {
+		"id": "reviewer",
+		"body": "book",
+		"bodyPlural": "books",
+		"target": "reviewer",
+		"targetPlural": "reviewers",
+		"incoming": "reviewed by",
+		"outgoing": "has reviewed"
+	},
+	"unknown": {
+		"id": "unknown",
+		"body": "item",
+		"bodyPlural": "items",
+		"target": "item",
+		"targetPlural": "items",
+		"incoming": "linked to",
+		"outgoing": "linked to"
+	}
+}
