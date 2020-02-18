@@ -51,7 +51,7 @@ namespace ANVC.Scalar
             return node;
         }
 
-        public static IEnumerator LoadNode(string uriSegment, HandleLoadNodeSuccess successCallback, HandleNodeLoadError errorCallback, int depth, bool references, string relation = null, int start = -1, int results = -1, bool provenance = false, bool allVersions = false)
+        public static IEnumerator LoadNode(string uriSegment, HandleLoadNodeSuccess successCallback = null, HandleNodeLoadError errorCallback = null, int depth = 0, bool references = false, string relation = null, int start = -1, int results = -1, bool provenance = false, bool allVersions = false)
         {
             string queryString = "format=json";
             queryString += "&rec=" + depth;
@@ -70,11 +70,17 @@ namespace ANVC.Scalar
                 JSONNode data = JSON.Parse(request.downloadHandler.text);
                 ParseNodes(data);
                 ParseRelations(data);
-                successCallback(data);
+                if (successCallback != null)
+                {
+                    successCallback(data);
+                }
             }
             else
             {
-                errorCallback(request.error);
+                if (errorCallback != null)
+                {
+                    errorCallback(request.error);
+                }
             }
         }
 
