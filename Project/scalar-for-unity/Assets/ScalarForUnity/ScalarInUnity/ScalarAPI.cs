@@ -22,7 +22,7 @@ namespace ANVC.Scalar
 
         public string bookUrlPrefix;
 
-        void Start()
+        void Awake()
         {
             nodes = new List<ScalarNode>();
             nodesByURL = new Dictionary<string, ScalarNode>();
