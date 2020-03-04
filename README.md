@@ -49,7 +49,11 @@ Returns the ScalarNode in the current book identified by the specified URI or UR
 ### Public Methods
 **GetRelatedNodes**(type, direction, [includeNonPages], [sort])
 
-Returns an array of ScalarNode objects related to the node by the specified criteria.
+Returns a List of ScalarNode objects related to the node by the specified criteria.
+
+**GetRelations**(type, direction, [includeNonPages], [sort])
+
+Returns a List of ScalarRelation objects related to the node by the specified criteria.
 
 **GetDisplayTitle**()
 
