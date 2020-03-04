@@ -276,6 +276,53 @@ namespace ANVC.Scalar
             return results;
         }
 
+        public List<ScalarRelation> GetRelations(string type, string direction, bool includeNonPages = false, string sort = "index")
+        {
+            int n;
+            ScalarRelation relation;
+            List<ScalarRelation> results = new List<ScalarRelation>();
+            if (direction == "incoming" || direction == "both")
+            {
+                n = incomingRelations.Count;
+                for (int i = 0; i < n; i++)
+                {
+                    relation = incomingRelations[i];
+                    if (relation.type.id == type || type == null)
+                    {
+                        if (includeNonPages || (!includeNonPages && !System.Object.ReferenceEquals(relation.body.current, null) && !System.Object.ReferenceEquals(relation.target.current, null)))
+                        {
+                            results.Add(relation);
+                        }
+                    }
+                }
+            }
+            if (direction == "outgoing" || direction == "both")
+            {
+                n = outgoingRelations.Count;
+                for (int i = 0; i < n; i++)
+                {
+                    relation = outgoingRelations[i];
+                    if (relation.type.id == type || type == null)
+                    {
+                        if (includeNonPages || (!includeNonPages && !System.Object.ReferenceEquals(relation.body.current, null) && !System.Object.ReferenceEquals(relation.target.current, null)))
+                        {
+                            results.Add(relation);
+                        }
+                    }
+                }
+            }
+            switch (sort)
+            {
+                case "index":
+                    results.OrderBy(i => i.index);
+                    break;
+                case "reverseindex":
+                    results.OrderByDescending(i => i.index);
+                    break;
+            }
+            return results;
+        }
+
         public string GetDisplayTitle()
         {
             string displayTitle = ScalarAPI.untitledNodeString;

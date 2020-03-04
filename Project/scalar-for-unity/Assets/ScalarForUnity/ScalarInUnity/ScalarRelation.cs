@@ -42,7 +42,7 @@ namespace ANVC.Scalar
                     }
                     else
                     {
-                        foreach (KeyValuePair<string,string> kv in anchorVars)
+                        foreach (KeyValuePair<string, string> kv in anchorVars)
                         {
                             switch (kv.Key)
                             {
@@ -90,36 +90,65 @@ namespace ANVC.Scalar
                                     properties.y = temp[1];
                                     properties.width = temp[2];
                                     properties.height = temp[3];
-                                    startString = "x:" + Mathf.Round(float.Parse(properties.x));
+
+                                    float x, y;
+                                    string suffix;
+                                    startString = "x:";
                                     if (properties.x.Contains("%"))
                                     {
-                                        startString += "%";
+                                        suffix = "%";
+                                        x = Mathf.Round(float.Parse(properties.x.Substring(0, properties.x.Length - 1)));
+                                    } else
+                                    {
+                                        suffix = "";
+                                        x = Mathf.Round(float.Parse(properties.x));
                                     }
-                                    startString += " y:" + Mathf.Round(float.Parse(properties.y));
+                                    startString += x + suffix;
+
+                                    startString += " y:";
                                     if (properties.y.Contains("%"))
                                     {
-                                        startString += "%";
-                                    }
-                                    if (int.Parse(properties.width) == 0 && int.Parse(properties.height) == 0)
-                                    {
-                                        endString = "";
+                                        suffix = "%";
+                                        y = Mathf.Round(float.Parse(properties.y.Substring(0, properties.y.Length - 1)));
                                     }
                                     else
                                     {
-                                        endString = "w:" + Mathf.Round(float.Parse(properties.width));
+                                        suffix = "";
+                                        y = Mathf.Round(float.Parse(properties.y));
+                                    }
+                                    startString += y + suffix;
+                                    endString = "";
+                                    float width;
+                                    float height;
+                                    if (properties.width != "undefined" && properties.height != "undefined")
+                                    {
                                         if (properties.width.Contains("%"))
                                         {
-                                            endString += "%";
+                                            suffix = "%";
+                                            width = Mathf.Round(float.Parse(properties.width.Substring(0, properties.width.Length - 1)));
                                         }
-                                        endString += " h:" + Mathf.Round(float.Parse(properties.height));
+                                        else
+                                        {
+                                            suffix = "";
+                                            width = Mathf.Round(float.Parse(properties.width));
+                                        }
+                                        endString += "w:" + width + suffix;
+
                                         if (properties.height.Contains("%"))
                                         {
-                                            endString += "%";
+                                            suffix = "%";
+                                            height = Mathf.Round(float.Parse(properties.height.Substring(0, properties.height.Length - 1)));
                                         }
+                                        else
+                                        {
+                                            suffix = "";
+                                            height = Mathf.Round(float.Parse(properties.height));
+                                        }
+                                        endString += " h:" + height + suffix;
                                     }
                                     separator = " ";
                                     subType = "spatial";
-                                    index = float.Parse(properties.x) * float.Parse(properties.y);
+                                    index = x * y;
                                     id += kv.Key + index;
                                     break;
 
