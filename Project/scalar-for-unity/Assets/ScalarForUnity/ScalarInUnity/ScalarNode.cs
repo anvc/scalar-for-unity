@@ -349,6 +349,23 @@ namespace ANVC.Scalar
             return sortTitle;
         }
 
+        public string GetAbsoluteThumbnailURL()
+        {
+            if (thumbnail != null)
+            {
+                string thumbnailUrl = thumbnail;
+                if (thumbnailUrl.Contains("://"))
+                {
+                    thumbnailUrl = ScalarAPI.urlPrefix + thumbnailUrl;
+                }
+                return thumbnailUrl;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public override string ToString()
         {
             if (System.Object.ReferenceEquals(current, null))
