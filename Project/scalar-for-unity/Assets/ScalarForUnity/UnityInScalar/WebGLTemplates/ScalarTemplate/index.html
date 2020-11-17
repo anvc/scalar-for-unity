@@ -126,7 +126,7 @@
 
       function receiveMessage(e) {
         console.log("HTML template received message: " + e.data);
-        gameInstance.SendMessage('ScalarCamera', 'SetTransform', e.data);
+        gameInstance.SendMessage('ScalarCamera', 'SetTransform', JSON.stringify(e.data));
       }
 
       window.addEventListener('message', receiveMessage);

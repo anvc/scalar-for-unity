@@ -14,5 +14,13 @@ namespace ANVC.Scalar
         public string height;
         public float index;
         public string datetime;
+        public string targetX;
+        public string targetY;
+        public string targetZ;
+        public string cameraX;
+        public string cameraY;
+        public string cameraZ;
+        public string roll;
+        public string fieldOfView;
     }
 }

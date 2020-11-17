@@ -152,6 +152,31 @@ namespace ANVC.Scalar
                                     id += kv.Key + index;
                                     break;
 
+                                case "pos3d":
+                                    if (type == null) type = ScalarAPI.relationTypes["annotation"];
+                                    temp = new List<string>(anchorVars[kv.Key].Split(','));
+                                    properties.targetX = temp[0];
+                                    properties.targetY = temp[1];
+                                    properties.targetZ = temp[2];
+                                    properties.cameraX = temp[3];
+                                    properties.cameraY = temp[4];
+                                    properties.cameraZ = temp[5];
+                                    properties.roll = temp[6];
+                                    properties.fieldOfView = temp[7];
+                                    startString = "x: " + Mathf.Round(float.Parse(properties.targetX));
+                                    startString += " y: " + Mathf.Round(float.Parse(properties.targetY));
+                                    startString += " z: " + Mathf.Round(float.Parse(properties.targetZ));
+                                    endString = " camera x: " + Mathf.Round(float.Parse(properties.cameraX));
+                                    endString += " y: " + Mathf.Round(float.Parse(properties.cameraY));
+                                    endString += " z: " + Mathf.Round(float.Parse(properties.cameraZ));
+                                    endString += " roll: " + Mathf.Round(float.Parse(properties.roll));
+                                    endString += " fov: " + Mathf.Round(float.Parse(properties.fieldOfView));
+                                    separator = " ";
+                                    subType = "spatial";
+                                    index = float.Parse(properties.targetX) * float.Parse(properties.targetY) * float.Parse(properties.targetZ);
+                                    id += kv.Key + index;
+                                    break;
+
                                 case "index":
                                     if (type == null) type = ScalarAPI.relationTypes["path"];
                                     properties.index = float.Parse(anchorVars[kv.Key]);

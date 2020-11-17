@@ -154,7 +154,7 @@ namespace ANVC.Scalar
 
             foreach (var key in json.Keys)
             {
-                properties[key] = json[key];
+                properties[key] = json[key][0]["value"];
             }
         }
 
