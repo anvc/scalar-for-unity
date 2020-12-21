@@ -51,6 +51,13 @@ namespace ANVC.Scalar
             return node;
         }
 
+        public static void RemoveNodes()
+        {
+            nodes.Clear();
+            nodesByURL.Clear();
+            relationsById.Clear();
+        }
+
         public static IEnumerator LoadNode(string uriSegment, HandleLoadNodeSuccess successCallback = null, HandleNodeLoadError errorCallback = null, int depth = 0, bool references = false, string relation = null, int start = -1, int results = -1, bool provenance = false, bool allVersions = false)
         {
             string queryString = "format=json";

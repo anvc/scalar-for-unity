@@ -118,7 +118,7 @@
       if (progress === 1 && !gameInstance.removeTimeout) {
         gameInstance.removeTimeout = setTimeout(function() {
             loader.style.display = "none";
-        }, 2000);
+        }, 250);
       }
     }
 
@@ -126,7 +126,7 @@
 
       function receiveMessage(e) {
         console.log("HTML template received message: " + e.data);
-        gameInstance.SendMessage('ScalarCamera', 'SetTransform', JSON.stringify(e.data));
+        gameInstance.SendMessage(e.data.objectName, e.data.methodName, JSON.stringify(e.data.message));
       }
 
       window.addEventListener('message', receiveMessage);
