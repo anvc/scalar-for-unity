@@ -52,8 +52,8 @@ namespace ANVC.Scalar
                                     if (type == null) type = ScalarAPI.relationTypes["annotation"];
 
                                     temp = new List<string>(anchorVars[kv.Key].Substring(4).Split(','));
-                                    properties.start = float.Parse(temp[0]);
-                                    properties.end = float.Parse(temp[1]);
+                                    if (temp.Count > 1) properties.start = float.Parse(temp[0]);
+                                    if (temp.Count > 2) properties.end = float.Parse(temp[1]);
                                     startString = ScalarAPI.DecimalSecondsToHMMSS(properties.start);
                                     endString = ScalarAPI.DecimalSecondsToHMMSS(properties.end);
                                     separator = " - ";
@@ -65,8 +65,8 @@ namespace ANVC.Scalar
                                 case "line":
                                     if (type == null) type = ScalarAPI.relationTypes["annotation"];
                                     temp = new List<string>(anchorVars[kv.Key].Split(','));
-                                    properties.start = float.Parse(temp[0]);
-                                    properties.end = float.Parse(temp[1]);
+                                    if (temp.Count > 1) properties.start = float.Parse(temp[0]);
+                                    if (temp.Count > 2) properties.end = float.Parse(temp[1]);
                                     startString = "Line " + properties.start;
                                     if (properties.start == properties.end)
                                     {
@@ -86,10 +86,10 @@ namespace ANVC.Scalar
                                 case "xywh":
                                     if (type == null) type = ScalarAPI.relationTypes["annotation"];
                                     temp = new List<string>(anchorVars[kv.Key].Split(','));
-                                    properties.x = temp[0];
-                                    properties.y = temp[1];
-                                    properties.width = temp[2];
-                                    properties.height = temp[3];
+                                    if (temp.Count > 1) properties.x = temp[0];
+                                    if (temp.Count > 2) properties.y = temp[1];
+                                    if (temp.Count > 3) properties.width = temp[2];
+                                    if (temp.Count > 4) properties.height = temp[3];
 
                                     float x, y;
                                     string suffix;
@@ -155,14 +155,14 @@ namespace ANVC.Scalar
                                 case "pos3d":
                                     if (type == null) type = ScalarAPI.relationTypes["annotation"];
                                     temp = new List<string>(anchorVars[kv.Key].Split(','));
-                                    properties.targetX = temp[0];
-                                    properties.targetY = temp[1];
-                                    properties.targetZ = temp[2];
-                                    properties.cameraX = temp[3];
-                                    properties.cameraY = temp[4];
-                                    properties.cameraZ = temp[5];
-                                    properties.roll = temp[6];
-                                    properties.fieldOfView = temp[7];
+                                    if (temp.Count > 1) properties.targetX = temp[0];
+                                    if (temp.Count > 2) properties.targetY = temp[1];
+                                    if (temp.Count > 3) properties.targetZ = temp[2];
+                                    if (temp.Count > 4) properties.cameraX = temp[3];
+                                    if (temp.Count > 5) properties.cameraY = temp[4];
+                                    if (temp.Count > 6) properties.cameraZ = temp[5];
+                                    if (temp.Count > 7) properties.roll = temp[6];
+                                    if (temp.Count > 8) properties.fieldOfView = temp[7];
                                     startString = "x: " + Mathf.Round(float.Parse(properties.targetX));
                                     startString += " y: " + Mathf.Round(float.Parse(properties.targetY));
                                     startString += " z: " + Mathf.Round(float.Parse(properties.targetZ));

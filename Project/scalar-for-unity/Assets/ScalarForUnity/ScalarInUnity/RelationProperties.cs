@@ -8,19 +8,19 @@ namespace ANVC.Scalar
     {
         public float start;
         public float end;
-        public string x;
-        public string y;
-        public string width;
-        public string height;
+        public string x = "0";
+        public string y = "0";
+        public string width = "0";
+        public string height = "0";
         public float index;
         public string datetime;
-        public string targetX;
-        public string targetY;
-        public string targetZ;
-        public string cameraX;
-        public string cameraY;
-        public string cameraZ;
-        public string roll;
-        public string fieldOfView;
+        public string targetX = "0";
+        public string targetY = "0";
+        public string targetZ = "0";
+        public string cameraX = "0";
+        public string cameraY = "0";
+        public string cameraZ = "0";
+        public string roll = "0";
+        public string fieldOfView = "60";
     }
 }
