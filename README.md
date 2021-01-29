@@ -3,6 +3,7 @@ A bridge between Scalar and Unity. Not for public release at this time.
 ## Getting Started
 ### Import the package
 Import the package into your Unity project. Inside are a couple of demo scenes: **_ScalarInUnity** loads JSON data from the Scalar User’s Guide, and **_UnityInScalar** is a project which can be built and annotated as a media element within a Scalar book.
+## Accessing the ScalarAPI from Unity
 ### Specify the URL of the book to work with
 Add the `ScalarAPI` component to your scene, and fill in the Book URL Prefix for your book (`https://scalar.usc.edu/works/guide2` is the URL to the Scalar User’s Guide, for example).
 ### Load data
@@ -34,6 +35,13 @@ public void HandleError(string error)
     Debug.Log(error);
 }
 ```
+## Setting up a Unity scene to be annotated in Scalar
+### Working with the ScalarCamera
+Add the `ScalarAPI` and `ScalarCamera` prefabs to your scene. If you're planning to make calls from the scene to a specific book, fill in the Book URL prefix on the ScalarAPI component with the URL of your book (`https://scalar.usc.edu/works/guide2` is the URL to the Scalar User’s Guide, for example).
+
+When built as a WebGL project using the included Scalar template, and imported into Scalar as a media item, the `ScalarCamera` component in your scene will receive camera position and orientation data when annotations are selected in Scalar. Scalar's annotation editor will also be able to query the scene for the current position and orientation of the camera.
+
+The ScalarCamera prefab also includes a FreeCam component that allows WASD navigation in the 3D scene, and mouselook on right-click and drag.
 ## ScalarAPI
 ### Public Static Methods
 **LoadNode**(uriSegment, [successCallback], [errorCallback], [depth], [references], [relation], [start], [results], [provenance], [allVersions])
@@ -44,6 +52,9 @@ Calls the Scalar API data about the specified Scalar node in the current book, c
 
 Returns the ScalarNode in the current book identified by the specified URI or URI segment (also known as the “slug”), or null if no matching ScalarNode can be found.
 
+**RemoveNodes**()
+
+Removes all nodes from this instance of the API.
 
 ## ScalarNode
 ### Public Methods
@@ -63,5 +74,12 @@ Returns the title of the node, formatted for display.
 
 Returns the title of the node, formatted for alphabetical sorting (i.e. with initial non-alphabetic components like the word “the” removed). Normally used for internal processing of arrays of nodes.
 
+**GetAbsoluteThumbnailURL**()
+
+Returns the absolute URL to the node's thumbnail (if one exists).
+
 ## ScalarVersion
+Represents a single version of a Scalar node.
+
 ## ScalarRelation
+Represents (in most cases) a relationship between two Scalar nodes.
