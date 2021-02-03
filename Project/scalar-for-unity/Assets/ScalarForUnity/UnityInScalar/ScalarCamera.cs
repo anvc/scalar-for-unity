@@ -12,6 +12,7 @@ namespace ANVC.Scalar
         public float transitionDuration = 1.5f;
         public AnnotationSelectedExternallyEvent annotationSelectedExternallyEvent;
         public UnityEvent annotationsUpdatedExternallyEvent;
+        public MessageReceivedEvent messageReceivedEvent;
 
         private Camera _camera;
         private Vector3 _targetPosition;
@@ -75,8 +76,17 @@ namespace ANVC.Scalar
                 _camera.fieldOfView = val;
             }
         }
+
+        public void HandleMessage(string data)
+        {
+            JSONNode json = JSON.Parse(data);
+            messageReceivedEvent.Invoke(json);
+        }
     }
 }
 
 [System.Serializable]
 public class AnnotationSelectedExternallyEvent : UnityEvent<JSONNode> { }
+
+[System.Serializable]
+public class MessageReceivedEvent : UnityEvent<JSONNode> { }
