@@ -43,6 +43,7 @@ When built as a WebGL project using the included Scalar template, and imported i
 
 The ScalarCamera prefab also includes a FreeCam component that allows WASD navigation in the 3D scene, and mouselook on right-click and drag.
 
+### ScalarCamera events
 You can register your Unity components to receive several events from ScalarCamera that can enhance the integration.
 
 The **Annotation Selected Externally** event is called whenever the user selects an annotation in Scalar. Components registered to this event will receive JSON with the transform parameters of the selected annotation.
