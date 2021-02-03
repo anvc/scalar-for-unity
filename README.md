@@ -42,6 +42,14 @@ Add the `ScalarAPI` and `ScalarCamera` prefabs to your scene. If you're planning
 When built as a WebGL project using the included Scalar template, and imported into Scalar as a media item, the `ScalarCamera` component in your scene will receive camera position and orientation data when annotations are selected in Scalar. Scalar's annotation editor will also be able to query the scene for the current position and orientation of the camera.
 
 The ScalarCamera prefab also includes a FreeCam component that allows WASD navigation in the 3D scene, and mouselook on right-click and drag.
+
+You can register your Unity components to receive several events from ScalarCamera that can enhance the integration.
+
+The **Annotation Selected Externally** event is called whenever the user selects an annotation in Scalar. Components registered to this event will receive JSON with the transform parameters of the selected annotation.
+
+The **Annotations Updated Externally** event is called when an annotation is edited in Scalar, to give the Unity scene a chance to update accordingly. No data is passed to components registered to this event.
+
+The **Message Received** event is called when an annotation with `dcterms:abstract` metadata is selected in Scalar. The string contained in `dcterms:abstract` will be parsed as JSON and then sent to components registered to this event.
 ## ScalarAPI
 ### Public Static Methods
 **LoadNode**(uriSegment, [successCallback], [errorCallback], [depth], [references], [relation], [start], [results], [provenance], [allVersions])
