@@ -69,7 +69,7 @@ Removes all nodes from this instance of the API.
 ### Public Methods
 **GetRelatedNodes**(type, direction, [includeNonPages], [sort])
 
-Returns a List of ScalarNode objects related to the node by the specified criteria. For the type parameter, pass in a Scalar type like `path`, `tag`, `annotation`, `comment`, or `referee` (for references to media from a page). For the direction parameter, pass in either `incoming` or `outgoing` depending on the directionality of the relationship ( relationships are typically outgoing from the named item; for example, a path has outgoing relationships to the pages and media it contains). 
+Returns a List of ScalarNode objects related to the node by the specified criteria. For the type parameter, pass in a Scalar type like `path`, `tag`, `annotation`, `comment`, or `referee` (for references to media from a page). For the direction parameter, pass in either `incoming` or `outgoing` depending on the directionality of the relationship (relationships are typically outgoing from the named item; for example, a path has outgoing relationships to the pages and media it contains). 
 
 To get all of the annotations on a piece of media, you would call `mediaNode.GetRelatedNodes('annotation', 'incoming')`.
 
