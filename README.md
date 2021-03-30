@@ -69,11 +69,11 @@ Removes all nodes from this instance of the API.
 ### Public Methods
 **GetRelatedNodes**(type, direction, [includeNonPages], [sort])
 
-Returns a List of ScalarNode objects related to the node by the specified criteria.
+Returns a List of ScalarNode objects related to the node by the specified criteria. For the type parameter, pass in a Scalar type like `path`, `tag`, `annotation`, `comment`, or referee (for references to media from a page). For the direction parameter, pass in either `incoming` or `outgoing` depending on the directionality of the relationship ( relationships are typically outgoing from the named item; for example, a path has outgoing relationships to the pages and media it contains). To get all of the annotations on a piece of media, you would call `mediaNode.GetRelatedNodes('annotation', 'incoming')`.
 
 **GetRelations**(type, direction, [includeNonPages], [sort])
 
-Returns a List of ScalarRelation objects related to the node by the specified criteria.
+Returns a List of ScalarRelation objects related to the node by the specified criteria. See `GetRelatedNodes` above for details on the usage of the type and direction parameters.
 
 **GetDisplayTitle**()
 
@@ -91,4 +91,4 @@ Returns the absolute URL to the node's thumbnail (if one exists).
 Represents a single version of a Scalar node.
 
 ## ScalarRelation
-Represents (in most cases) a relationship between two Scalar nodes.
+Represents (in most cases) a relationship between two Scalar nodes. Use the ScalarRelations `properties` property to access the annotation's position and/or dimensions, based on its type.
