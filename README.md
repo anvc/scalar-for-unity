@@ -1,5 +1,5 @@
 # scalar-for-unity
-A bridge between Scalar and Unity. Not for public release at this time.
+A bridge between Scalar and Unity.
 ## Getting Started
 ### Import the package
 Import the package into your Unity project. Inside are a couple of demo scenes: **_ScalarInUnity** loads JSON data from the Scalar User’s Guide, and **_UnityInScalar** is a project which can be built and annotated as a media element within a Scalar book.
