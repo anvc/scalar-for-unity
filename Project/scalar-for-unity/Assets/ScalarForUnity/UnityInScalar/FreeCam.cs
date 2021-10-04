@@ -130,7 +130,6 @@ public class FreeCam : MonoBehaviour
     {
         looking = true;
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     /// <summary>
@@ -140,6 +139,5 @@ public class FreeCam : MonoBehaviour
     {
         looking = false;
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
     }
 }
