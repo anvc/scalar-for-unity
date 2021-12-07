@@ -51,6 +51,12 @@ The **Annotation Selected Externally** event is called whenever the user selects
 The **Annotations Updated Externally** event is called when an annotation is edited in Scalar, to give the Unity scene a chance to update accordingly. No data is passed to components registered to this event.
 
 The **Message Received** event is called when an annotation with `dcterms:abstract` metadata is selected in Scalar. The string contained in `dcterms:abstract` will be parsed as JSON and then sent to components registered to this event.
+
+### Building your project
+The package contains WebGL templates that must be used when building your project -- these include the JavaScript functions that allow Scalar and Unity to communicate. 
+
+You can choose the template you want to use in Project Settings > Player > Resolution and Presentation. Use **ScalarTemplate** for Unity versions prior to 2020, and **ScalarTemplate2020** for Unity versions 2020 and above.
+
 ## ScalarAPI
 ### Public Static Methods
 **LoadNode**(uriSegment, [successCallback], [errorCallback], [depth], [references], [relation], [start], [results], [provenance], [allVersions])
