@@ -55,7 +55,9 @@ The **Message Received** event is called when an annotation with `dcterms:abstra
 ### Building your project
 The package contains WebGL templates that must be used when building your project -- these include the JavaScript functions that allow Scalar and Unity to communicate. 
 
-You can choose the template you want to use in Project Settings > Player > Resolution and Presentation. Use **ScalarTemplate** for Unity versions prior to 2020, and **ScalarTemplate2020** for Unity versions 2020 and above.
+You can choose the template you want to use in Project Settings > Player > Resolution and Presentation. Use **ScalarTemplate** for Unity versions prior to 2020, and **ScalarTemplate2020** for Unity versions 2020 and above. 
+
+NOTE: If the server where your project is hosted does not support gzip, be sure to set Project Settings > Player > Publishing Settings > Compression Format to Disabled.
 
 ## ScalarAPI
 ### Public Static Methods
