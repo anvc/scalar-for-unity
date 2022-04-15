@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 170076735}
   - component: {fileID: 170076734}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Red Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 585802038}
   - component: {fileID: 585802037}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Blue Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -309,7 +309,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -127.5, y: 126.26, z: 0}
 --- !u!1001 &773190229
 PrefabInstance:
@@ -321,7 +321,7 @@ PrefabInstance:
     - target: {fileID: 7857329111701137184, guid: cf60d2558e93d43a1baf54e9b44a6c46,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7857329111701137184, guid: cf60d2558e93d43a1baf54e9b44a6c46,
         type: 3}
@@ -494,7 +494,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 45, y: 156.32, z: 45}
 --- !u!114 &799790569
 MonoBehaviour:
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 1193494067}
   - component: {fileID: 1193494066}
   m_Layer: 0
-  m_Name: Directional Light (2)
+  m_Name: Green Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -601,7 +601,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -310.8, y: -282.2, z: 0}
 --- !u!850595691 &1842531339
 LightingSettings:
