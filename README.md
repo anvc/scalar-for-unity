@@ -3,6 +3,7 @@ A bridge between Scalar and Unity.
 ## In Memoriam
 The original impetus for the scalar-for-unity package came from the late [Angel David Nieves](https://cssh.northeastern.edu/faculty/angel-david-nieves/), a brilliant scholar in the digital humanities and a longtime supporter of Scalar, whose spatial humanities project [Apartheid Heritages](https://apartheidheritagesproject.org/) made it possible.
 ## Getting Started
+For an overview of working with Unity in Scalar, including important hosting requirements, see [Working with Unity Scenes](https://scalar.usc.edu/works/guide2/working-with-unity-scenes) in the Scalar User's Guide.
 ### Import the package
 Import the package into your Unity project. Inside are a couple of demo scenes: **_ScalarInUnity** loads JSON data from the Scalar User’s Guide, and **_UnityInScalar** is a project which can be built and annotated as a media element within a Scalar book.
 ## Accessing the ScalarAPI from Unity
